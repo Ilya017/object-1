@@ -52,7 +52,7 @@ let myrzik = new Dog("Myrzik", "Japanise", 24);
 let dogs = [fido, gav, myrzik];
 let coef;
 for (i = 0; i < dogs.length; i++) {
-    alert(dogs[i].name);
+    alert(dogs[i]);
     dogs[i].bark();
     dogs[i].start();
     coef = +prompt("Введите скорость:");
