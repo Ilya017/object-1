@@ -21,13 +21,25 @@ function Dog(name, breed, weight) {
     this.name = name;
     this.breed = breed;
     this.weight = weight;
+    this.speed = 0;
     this.bark = function() {
         if (this.weight < 25) {
-            alert(this.name + "тяв!");
+            alert(this.name +": " + "тяв!");
         }
         else {
-            alert(this.name + "гав!");
+            alert(this.name +": " + "гав!");
         }
+    };
+    this.start = function () {
+        this.speed = 1;
+        alert("Скорость " + this.name + ": "+ this.speed);
+    };
+    this.changeSpeed = function (coef) {
+        coef = +prompt("Введите скорость:");
+        this.speed = coef;
+    };
+    this.showSpeed = function () {
+        alert("Скорость " + this.name + ": "+ this.speed);
     };
 }
 
@@ -36,7 +48,11 @@ let gav = new Dog("Gav", "African", 15);
 let myrzik = new Dog("Myrzik", "Japanise", 24);
 
 let dogs = [fido, gav, myrzik];
+let coef;
 for (i = 0; i < dogs.length; i++) {
     alert(dogs[i].name);
     dogs[i].bark();
+    dogs[i].start();
+    dogs[i].changeSpeed(coef);
+    dogs[i].showSpeed();
 }
