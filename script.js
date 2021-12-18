@@ -35,7 +35,7 @@ function Dog(name, breed, weight) {
         alert("Скорость " + this.name + ": "+ this.speed);
     };
     this.changeSpeed = function (coef) {
-        this.speed = coef;
+        this.speed *= coef;
     };
     this.showSpeed = function () {
         alert("Скорость " + this.name + ": "+ this.speed);
