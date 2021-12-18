@@ -40,6 +40,9 @@ function Dog(name, breed, weight) {
     this.showSpeed = function () {
         alert("Скорость " + this.name + ": "+ this.speed);
     };
+    this.toString = function() {
+        return `${this.name} ${this.breed} ${this.weight}`;
+    }
 }
 
 let fido = new Dog("Fido", "Mixed", 38);
