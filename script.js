@@ -35,7 +35,6 @@ function Dog(name, breed, weight) {
         alert("Скорость " + this.name + ": "+ this.speed);
     };
     this.changeSpeed = function (coef) {
-        coef = +prompt("Введите скорость:");
         this.speed = coef;
     };
     this.showSpeed = function () {
@@ -53,6 +52,7 @@ for (i = 0; i < dogs.length; i++) {
     alert(dogs[i].name);
     dogs[i].bark();
     dogs[i].start();
+    coef = +prompt("Введите скорость:");
     dogs[i].changeSpeed(coef);
     dogs[i].showSpeed();
 }
